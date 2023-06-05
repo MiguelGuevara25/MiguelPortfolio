@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: "Raleway", sans-serif;
+}
+
+.grid-create {
+  grid-template-columns: repeat(4, 1fr);
+
+  @media (min-width: 767px) {
+    grid-template-columns: repeat(7, 1fr);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.animationPage {
+  animation: fadeIn 1s forwards;
+}
+
+.titles {
+  position: relative;
+  display: inline-block;
+}
+
+.titles::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  width: 105%;
+  height: 5px;
+  background-color: #facc15;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease-in-out;
+}
+
+.titles:hover::before {
+  transform: scaleX(1);
+}

@@ -1,0 +1,41 @@
+.links {
+  width: 8em;
+  transition: 0.5s;
+  line-height: 2em;
+  margin: 0.8em;
+}
+
+.links::after,
+.links::before {
+  content: "";
+  position: absolute;
+  width: 0.6em;
+  height: 0.6em;
+  background-color: #fef08a;
+  border-radius: 50%;
+  transition: 0.5s cubic-bezier(0.5, -0.5, 0.25, 1.25);
+  top: calc(50% - 0.6em / 2);
+}
+
+.links::before {
+  left: 0;
+  z-index: -1;
+}
+
+.links::after {
+  right: 0;
+  z-index: -2;
+}
+
+.links:hover::after,
+.links:hover::before {
+  width: 100%;
+  height: 100%;
+  background-color: #facc15;
+  border-radius: 0;
+}
+
+.links:hover::after {
+  right: -0.4em;
+  background-color: #854d0e;
+}
