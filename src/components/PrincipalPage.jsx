@@ -7,7 +7,7 @@ import AboutMe from "./AboutMe";
 
 const PrincipalPage = () => {
   return (
-    <div className="animationPage">
+    <div className="animationPage overflow-x-hidden">
       <Navbar />
       <AboutMe />
       <Skills />

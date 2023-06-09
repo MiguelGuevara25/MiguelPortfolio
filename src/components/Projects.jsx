@@ -58,7 +58,12 @@ const Projects = () => {
           target="_blank"
           rel="noreferrer"
         >
-          <Card sx={{ maxWidth: { xs: 280, lg: 370, xl: 450 }, height: 300 }}>
+          <Card
+            sx={{
+              maxWidth: { xs: 280, lg: 370, xl: 450 },
+              height: { md: 300, xs: 325 },
+            }}
+          >
             <CardMedia
               sx={{ height: 200 }}
               component="img"
@@ -96,7 +101,12 @@ const Projects = () => {
           target="_blank"
           rel="noreferrer"
         >
-          <Card sx={{ maxWidth: { xs: 280, lg: 370, xl: 450 }, height: 300 }}>
+          <Card
+            sx={{
+              maxWidth: { xs: 280, lg: 370, xl: 450 },
+              height: 300,
+            }}
+          >
             <CardMedia
               component="img"
               sx={{ height: 200 }}
@@ -206,7 +216,12 @@ const Projects = () => {
           target="_blank"
           rel="noreferrer"
         >
-          <Card sx={{ maxWidth: { xs: 280, lg: 370, xl: 450 }, height: 300 }}>
+          <Card
+            sx={{
+              maxWidth: { xs: 280, lg: 370, xl: 450 },
+              height: { md: 300, xs: 325 },
+            }}
+          >
             <CardMedia
               sx={{ height: 200 }}
               component="img"
