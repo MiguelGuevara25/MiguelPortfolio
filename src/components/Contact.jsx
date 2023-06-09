@@ -1,5 +1,4 @@
-import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
-import { IoMdMail } from "react-icons/io";
+import { FaGithub, FaLinkedin, FaTwitter, FaWhatsapp } from "react-icons/fa";
 
 const Contact = () => {
   return (
@@ -67,8 +66,14 @@ const Contact = () => {
             </div>
 
             <div className="flex items-center gap-2">
-              <IoMdMail />
-              <span>Email</span>
+              <FaWhatsapp />
+              <a
+                href="https://api.whatsapp.com/send?phone=51931130017"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Whatsapp
+              </a>
             </div>
           </div>
         </div>
