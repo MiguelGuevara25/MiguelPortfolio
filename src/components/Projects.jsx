@@ -9,12 +9,13 @@ import {
   FaSass,
   FaBootstrap,
 } from "react-icons/fa";
-import { SiTailwindcss, SiMui, SiVite, SiJquery } from "react-icons/si";
+import { SiTailwindcss, SiMui, SiVite, SiJquery, SiAstro } from "react-icons/si";
 import { DiJavascript1 } from "react-icons/di";
 import { Card, CardMedia, Typography, CardContent } from "@mui/material";
 
 import ProjectCripto from "../img/projectCripto.png";
 import ProjectComfisa from "../img/projectComfisa.png";
+import ProjectGlinseal from "../img/projectGlinseal.png";
 import ProjectPokemon from "../img/projectFightPokemon.png";
 import ProjectCotiAutos from "../img/projectCotizadorAutos.png";
 import ProjectFestivalMusic from "../img/projectFestivalMusic.png";
@@ -326,6 +327,44 @@ const Projects = () => {
                   <FaCss3Alt />
                   <FaBootstrap />
                   <SiJquery />
+                </div>
+              </Typography>
+            </CardContent>
+          </Card>
+        </a>
+
+        <a
+          href="https://glinsealastro.vercel.app/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <Card sx={{ maxWidth: { xs: 280, lg: 370, xl: 450 }, height: 300 }}>
+            <CardMedia
+              component="img"
+              sx={{ height: 200 }}
+              alt="Project Glinseal"
+              image={ProjectGlinseal}
+            />
+
+            <CardContent>
+              <Typography gutterBottom variant="h5" component="div">
+                Glinseal Website
+              </Typography>
+
+              <Typography
+                variant="body2"
+                sx={{
+                  fontSize: 17,
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 1,
+                }}
+              >
+                Made With:{" "}
+                <div className="flex gap-2 font-bold">
+                  <SiAstro />
+                  <FaBootstrap />
+                  <DiJavascript1 />
                 </div>
               </Typography>
             </CardContent>
