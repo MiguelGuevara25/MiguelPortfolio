@@ -1,21 +1,15 @@
-import {
-  FaHtml5,
-  FaCss3Alt,
-  FaReact,
-  FaVuejs,
-  FaGithub,
-  FaNpm,
-  FaPhp,
-  FaGitlab,
-} from "react-icons/fa";
+import { FaReact, FaVuejs, FaGithub, FaGitlab, FaNodeJs } from "react-icons/fa";
 import {
   SiTailwindcss,
-  SiJavascript,
   SiVisualstudio,
   SiGit,
-  SiMysql,
   SiVite,
+  SiTypescript,
+  SiStrapi,
+  SiPostgresql,
+  SiAstro,
 } from "react-icons/si";
+import { TbBrandNextjs } from "react-icons/tb";
 
 const Skills = () => {
   return (
@@ -25,20 +19,20 @@ const Skills = () => {
       </h1>
 
       <section className="text-6xl grid grid-create text-yellow-400 gap-4 place-items-center">
-        <FaHtml5 className="hover:scale-125 transition-all" />
-        <FaCss3Alt className="hover:scale-125 transition-all" />
-        <SiJavascript className="hover:scale-125 transition-all" />
         <FaReact className="hover:scale-125 transition-all" />
+        <SiTypescript className="hover:scale-125 transition-all" />
         <SiTailwindcss className="hover:scale-125 transition-all" />
-        <FaVuejs className="hover:scale-125 transition-all" />
-        <SiVisualstudio className="hover:scale-125 transition-all" />
+        <TbBrandNextjs className="hover:scale-125 transition-all" />
+        <SiStrapi className="hover:scale-125 transition-all" />
+        <FaNodeJs className="hover:scale-125 transition-all" />
+        <SiAstro className="hover:scale-125 transition-all" />
         <FaGithub className="hover:scale-125 transition-all" />
+        <SiVisualstudio className="hover:scale-125 transition-all" />
         <SiGit className="hover:scale-125 transition-all" />
-        <FaNpm className="hover:scale-125 transition-all" />
-        <SiMysql className="hover:scale-125 transition-all" />
-        <FaPhp className="hover:scale-125 transition-all" />
+        <SiPostgresql className="hover:scale-125 transition-all" />
         <FaGitlab className="hover:scale-125 transition-all" />
         <SiVite className="hover:scale-125 transition-all" />
+        <FaVuejs className="hover:scale-125 transition-all" />
       </section>
     </div>
   );

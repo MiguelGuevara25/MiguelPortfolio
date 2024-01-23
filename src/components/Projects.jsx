@@ -9,14 +9,25 @@ import {
   FaSass,
   FaBootstrap,
 } from "react-icons/fa";
-import { SiTailwindcss, SiMui, SiVite, SiJquery, SiAstro } from "react-icons/si";
+import {
+  SiTailwindcss,
+  SiMui,
+  SiVite,
+  SiJquery,
+  SiAstro,
+  SiNextdotjs,
+  SiStrapi,
+} from "react-icons/si";
 import { DiJavascript1 } from "react-icons/di";
+import { TbBrandVercel } from "react-icons/tb";
 import { Card, CardMedia, Typography, CardContent } from "@mui/material";
 
 import ProjectCripto from "../img/projectCripto.png";
 import ProjectComfisa from "../img/projectComfisa.png";
 import ProjectGlinseal from "../img/projectGlinseal.png";
+import ProjectSusanaFerrel from "../img/projectSusana.png";
 import ProjectPokemon from "../img/projectFightPokemon.png";
+import ProjectCyberborder from "../img/projectCyberborder.png";
 import ProjectCotiAutos from "../img/projectCotizadorAutos.png";
 import ProjectFestivalMusic from "../img/projectFestivalMusic.png";
 import ProjectEstudioJuridico from "../img/projectEstudioJuridico.png";
@@ -54,6 +65,85 @@ const Projects = () => {
         My Projects
       </h1>
       <Slider {...settings}>
+        <a href="https://susanaferrel.com/" target="_blank" rel="noreferrer">
+          <Card
+            sx={{
+              maxWidth: { xs: 280, lg: 370, xl: 450 },
+              height: { md: 300, xs: 325 },
+            }}
+          >
+            <CardMedia
+              sx={{ height: 200 }}
+              component="img"
+              alt="Project Susana Ferrel"
+              image={ProjectSusanaFerrel}
+            />
+
+            <CardContent>
+              <Typography gutterBottom variant="h5" component="div">
+                Susana Ferrel Coaching & Consultoría
+              </Typography>
+
+              <Typography
+                variant="body2"
+                sx={{
+                  fontSize: 17,
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 1,
+                }}
+              >
+                Made With:{" "}
+                <div className="flex gap-2 font-bold">
+                  <FaReact />
+                  <SiTailwindcss />
+                  <SiVite />
+                  <SiStrapi />
+                </div>
+              </Typography>
+            </CardContent>
+          </Card>
+        </a>
+
+        <a href="https://www.cyberborder.com/" target="_blank" rel="noreferrer">
+          <Card
+            sx={{
+              maxWidth: { xs: 280, lg: 370, xl: 450 },
+              height: { md: 300, xs: 325 },
+            }}
+          >
+            <CardMedia
+              sx={{ height: 200 }}
+              component="img"
+              alt="Project Cyberborder"
+              image={ProjectCyberborder}
+            />
+
+            <CardContent>
+              <Typography gutterBottom variant="h5" component="div">
+                Cyberborder
+              </Typography>
+
+              <Typography
+                variant="body2"
+                sx={{
+                  fontSize: 17,
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 1,
+                }}
+              >
+                Made With:{" "}
+                <div className="flex gap-2 font-bold">
+                  <SiNextdotjs />
+                  <FaBootstrap />
+                  <TbBrandVercel />
+                </div>
+              </Typography>
+            </CardContent>
+          </Card>
+        </a>
+
         <a
           href="https://veterinarycitas.netlify.app"
           target="_blank"
@@ -147,8 +237,8 @@ const Projects = () => {
         >
           <Card sx={{ maxWidth: { xs: 280, lg: 370, xl: 450 }, height: 300 }}>
             <CardMedia
-              sx={{ height: 200 }}
               component="img"
+              sx={{ height: 200 }}
               alt="Project Festival Music"
               image={ProjectFestivalMusic}
             />
