@@ -8,8 +8,8 @@ import {
   SiStrapi,
   SiPostgresql,
   SiAstro,
+  SiNextdotjs,
 } from "react-icons/si";
-import { TbBrandNextjs } from "react-icons/tb";
 
 const Skills = () => {
   return (
@@ -22,7 +22,7 @@ const Skills = () => {
         <FaReact className="hover:scale-125 transition-all" />
         <SiTypescript className="hover:scale-125 transition-all" />
         <SiTailwindcss className="hover:scale-125 transition-all" />
-        <TbBrandNextjs className="hover:scale-125 transition-all" />
+        <SiNextdotjs className="hover:scale-125 transition-all" />
         <SiStrapi className="hover:scale-125 transition-all" />
         <FaNodeJs className="hover:scale-125 transition-all" />
         <SiAstro className="hover:scale-125 transition-all" />

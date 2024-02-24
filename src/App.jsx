@@ -9,7 +9,7 @@ function App() {
   useEffect(() => {
     setTimeout(() => {
       setScreenLoading(false);
-    }, 3000);
+    }, 100);
   }, []);
 
   return (

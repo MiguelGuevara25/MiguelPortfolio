@@ -32,6 +32,7 @@ import ProjectCotiAutos from "../img/projectCotizadorAutos.png";
 import ProjectFestivalMusic from "../img/projectFestivalMusic.png";
 import ProjectEstudioJuridico from "../img/projectEstudioJuridico.png";
 import ProjectCitasVeterinaria from "../img/projectCitasVeterinaria.png";
+import ProjectMuseosLima from "../img/projectMuseosLima.png";
 
 const Projects = () => {
   const settings = {
@@ -59,407 +60,155 @@ const Projects = () => {
     ],
   };
 
+  const technology = (tech) => {
+    switch (tech) {
+      case "HTML5":
+        return <FaHtml5 />;
+      case "CSS3":
+        return <FaCss3Alt />;
+      case "React":
+        return <FaReact />;
+      case "Sass":
+        return <FaSass />;
+      case "Bootstrap":
+        return <FaBootstrap />;
+      case "Tailwindcss":
+        return <SiTailwindcss />;
+      case "Material-UI":
+        return <SiMui />;
+      case "Vite":
+        return <SiVite />;
+      case "Javascript":
+        return <DiJavascript1 />;
+      case "jQuery":
+        return <SiJquery />;
+      case "Astro":
+        return <SiAstro />;
+      case "Next.js":
+        return <SiNextdotjs />;
+      case "Strapi":
+        return <SiStrapi />;
+      case "Vercel":
+        return <TbBrandVercel />;
+      default:
+        return <FaHtml5 />;
+    }
+  };
+
+  const data = [
+    {
+      title: "Susana Ferrel",
+      image: ProjectSusanaFerrel,
+      technologies: ["React", "Tailwindcss", "Vite", "Strapi"],
+      link: "https://susanaferrel.com/",
+    },
+
+    {
+      title: "Museos Lima",
+      image: ProjectMuseosLima,
+      technologies: ["Astro", "React", "Tailwindcss"],
+      link: "https://museos-lima.vercel.app/",
+    },
+
+    {
+      title: "Veterinary Appointments",
+      image: ProjectCitasVeterinaria,
+      technologies: ["React", "Tailwindcss", "Vite"],
+      link: "https://veterinarycitas.netlify.app",
+    },
+    {
+      title: "Cryptocurrency Quote",
+      image: ProjectCripto,
+      technologies: ["React", "Tailwindcss", "Vite"],
+      link: "https://coticriptos.netlify.app",
+    },
+    {
+      title: "Festival Music",
+      image: ProjectFestivalMusic,
+      technologies: ["HTML5", "CSS3", "Sass"],
+      link: "https://festivaldemusicaa.netlify.app",
+    },
+    {
+      title: "Legal Firm Innova",
+      image: ProjectEstudioJuridico,
+      technologies: ["HTML5", "CSS3", "Javascript"],
+      link: "https://abogaest.netlify.app",
+    },
+    {
+      title: "Pokemon Fight Simulator",
+      image: ProjectPokemon,
+      technologies: ["React", "Tailwindcss", "Material-UI", "Vite"],
+      link: "https://fightpokemon.netlify.app",
+    },
+    {
+      title: "Car Quotation",
+      image: ProjectCotiAutos,
+      technologies: ["React", "Tailwindcss", "Vite"],
+      link: "https://cotiautos.netlify.app",
+    },
+    {
+      title: "COMFISA SAC",
+      image: ProjectComfisa,
+      technologies: ["HTML5", "CSS3", "Bootstrap", "jQuery"],
+      link: "https://comfisasac.netlify.app",
+    },
+    
+    {
+      title: "Glinseal Website",
+      image: ProjectGlinseal,
+      technologies: ["Astro", "Bootstrap", "Javascript"],
+      link: "https://glinsealastro.vercel.app/",
+    },
+
+    {
+      title: "Cyberborder",
+      image: ProjectCyberborder,
+      technologies: ["Next.js", "Bootstrap", "Vercel"],
+      link: "https://www.cyberborder.com/",
+    },
+  ];
+
   return (
     <div className="container mx-auto">
       <h1 className="text-white uppercase font-bold text-3xl titles my-5">
         My Projects
       </h1>
       <Slider {...settings}>
-        <a href="https://susanaferrel.com/" target="_blank" rel="noreferrer">
-          <Card
-            sx={{
-              maxWidth: { xs: 280, lg: 370, xl: 450 },
-              height: { md: 300, xs: 325 },
-            }}
-          >
-            <CardMedia
-              sx={{ height: 200 }}
-              component="img"
-              alt="Project Susana Ferrel"
-              image={ProjectSusanaFerrel}
-            />
-
-            <CardContent>
-              <Typography gutterBottom variant="h5" component="div">
-                Susana Ferrel Coaching & Consultoría
-              </Typography>
-
-              <Typography
-                variant="body2"
+        {data.map((project, index) => {
+          return (
+            <a href={project.link} target="_blank" rel="noreferrer" key={index}>
+              <Card
                 sx={{
-                  fontSize: 17,
-                  display: "flex",
-                  alignItems: "center",
-                  gap: 1,
+                  height: { xs: 380, md: 350 },
+                  maxWidth: { xs: 265, lg: 370, xl: 450 },
                 }}
               >
-                Made With:{" "}
-                <div className="flex gap-2 font-bold">
-                  <FaReact />
-                  <SiTailwindcss />
-                  <SiVite />
-                  <SiStrapi />
-                </div>
-              </Typography>
-            </CardContent>
-          </Card>
-        </a>
+                <CardMedia
+                  sx={{ height: 250 }}
+                  component="img"
+                  image={project.image}
+                  alt={project.title}
+                />
+                <CardContent>
+                  <Typography gutterBottom variant="h5" component="div">
+                    {project.title}
+                  </Typography>
 
-        <a href="https://www.cyberborder.com/" target="_blank" rel="noreferrer">
-          <Card
-            sx={{
-              maxWidth: { xs: 280, lg: 370, xl: 450 },
-              height: { md: 300, xs: 325 },
-            }}
-          >
-            <CardMedia
-              sx={{ height: 200 }}
-              component="img"
-              alt="Project Cyberborder"
-              image={ProjectCyberborder}
-            />
-
-            <CardContent>
-              <Typography gutterBottom variant="h5" component="div">
-                Cyberborder
-              </Typography>
-
-              <Typography
-                variant="body2"
-                sx={{
-                  fontSize: 17,
-                  display: "flex",
-                  alignItems: "center",
-                  gap: 1,
-                }}
-              >
-                Made With:{" "}
-                <div className="flex gap-2 font-bold">
-                  <SiNextdotjs />
-                  <FaBootstrap />
-                  <TbBrandVercel />
-                </div>
-              </Typography>
-            </CardContent>
-          </Card>
-        </a>
-
-        <a
-          href="https://veterinarycitas.netlify.app"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <Card
-            sx={{
-              maxWidth: { xs: 280, lg: 370, xl: 450 },
-              height: { md: 300, xs: 325 },
-            }}
-          >
-            <CardMedia
-              sx={{ height: 200 }}
-              component="img"
-              alt="Project Citas Veterinaria"
-              image={ProjectCitasVeterinaria}
-            />
-
-            <CardContent>
-              <Typography gutterBottom variant="h5" component="div">
-                Veterinary Appointments
-              </Typography>
-
-              <Typography
-                variant="body2"
-                sx={{
-                  fontSize: 17,
-                  display: "flex",
-                  alignItems: "center",
-                  gap: 1,
-                }}
-              >
-                Made With:{" "}
-                <div className="flex gap-2 font-bold">
-                  <FaReact />
-                  <SiTailwindcss />
-                  <SiVite />
-                </div>
-              </Typography>
-            </CardContent>
-          </Card>
-        </a>
-
-        <a
-          href="https://coticriptos.netlify.app"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <Card
-            sx={{
-              maxWidth: { xs: 280, lg: 370, xl: 450 },
-              height: 300,
-            }}
-          >
-            <CardMedia
-              component="img"
-              sx={{ height: 200 }}
-              alt="Project Cripto"
-              image={ProjectCripto}
-            />
-
-            <CardContent>
-              <Typography gutterBottom variant="h5" component="div">
-                Cryptocurrency Quote
-              </Typography>
-
-              <Typography
-                variant="body2"
-                sx={{
-                  fontSize: 17,
-                  display: "flex",
-                  alignItems: "center",
-                  gap: 1,
-                }}
-              >
-                Made With:{" "}
-                <div className="flex gap-2 font-bold">
-                  <FaReact />
-                  <SiTailwindcss />
-                  <SiVite />
-                </div>
-              </Typography>
-            </CardContent>
-          </Card>
-        </a>
-
-        <a
-          href="https://festivaldemusicaa.netlify.app"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <Card sx={{ maxWidth: { xs: 280, lg: 370, xl: 450 }, height: 300 }}>
-            <CardMedia
-              component="img"
-              sx={{ height: 200 }}
-              alt="Project Festival Music"
-              image={ProjectFestivalMusic}
-            />
-
-            <CardContent>
-              <Typography gutterBottom variant="h5" component="div">
-                Festival Music
-              </Typography>
-
-              <Typography
-                variant="body2"
-                sx={{
-                  fontSize: 17,
-                  display: "flex",
-                  alignItems: "center",
-                  gap: 1,
-                }}
-              >
-                Made With:{" "}
-                <div className="flex gap-2 font-bold">
-                  <FaHtml5 />
-                  <FaCss3Alt />
-                  <FaSass />
-                </div>
-              </Typography>
-            </CardContent>
-          </Card>
-        </a>
-
-        <a href="https://abogaest.netlify.app" target="_blank" rel="noreferrer">
-          <Card sx={{ maxWidth: { xs: 280, lg: 370, xl: 450 }, height: 300 }}>
-            <CardMedia
-              component="img"
-              sx={{ height: 200 }}
-              alt="Project Estudio Juridico"
-              image={ProjectEstudioJuridico}
-            />
-
-            <CardContent>
-              <Typography gutterBottom variant="h5" component="div">
-                Legal Firm Innova
-              </Typography>
-
-              <Typography
-                variant="body2"
-                sx={{
-                  fontSize: 17,
-                  display: "flex",
-                  alignItems: "center",
-                  gap: 1,
-                }}
-              >
-                Made With:{" "}
-                <div className="flex gap-2 font-bold">
-                  <FaHtml5 />
-                  <FaCss3Alt />
-                  <DiJavascript1 />
-                </div>
-              </Typography>
-            </CardContent>
-          </Card>
-        </a>
-
-        <a
-          href="https://fightpokemon.netlify.app"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <Card
-            sx={{
-              maxWidth: { xs: 280, lg: 370, xl: 450 },
-              height: { md: 300, xs: 325 },
-            }}
-          >
-            <CardMedia
-              sx={{ height: 200 }}
-              component="img"
-              alt="Project Fight Pokemon"
-              image={ProjectPokemon}
-            />
-
-            <CardContent>
-              <Typography gutterBottom variant="h5" component="div">
-                Pokemon Fight Simulator
-              </Typography>
-
-              <Typography
-                variant="body2"
-                sx={{
-                  fontSize: 17,
-                  display: "flex",
-                  alignItems: "center",
-                  gap: 1,
-                }}
-              >
-                Made With:{" "}
-                <div className="flex gap-2 font-bold">
-                  <FaReact />
-                  <SiTailwindcss />
-                  <SiMui />
-                  <SiVite />
-                </div>
-              </Typography>
-            </CardContent>
-          </Card>
-        </a>
-
-        <a
-          href="https://cotiautos.netlify.app"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <Card sx={{ maxWidth: { xs: 280, lg: 370, xl: 450 }, height: 300 }}>
-            <CardMedia
-              sx={{ height: 200 }}
-              component="img"
-              alt="Project Coti Autos"
-              image={ProjectCotiAutos}
-            />
-
-            <CardContent>
-              <Typography gutterBottom variant="h5" component="div">
-                Car Quotation
-              </Typography>
-
-              <Typography
-                variant="body2"
-                sx={{
-                  fontSize: 17,
-                  display: "flex",
-                  alignItems: "center",
-                  gap: 1,
-                }}
-              >
-                Made With:{" "}
-                <div className="flex gap-2 font-bold">
-                  <FaReact />
-                  <SiTailwindcss />
-                  <SiVite />
-                </div>
-              </Typography>
-            </CardContent>
-          </Card>
-        </a>
-
-        <a
-          href="https://comfisasac.netlify.app"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <Card sx={{ maxWidth: { xs: 280, lg: 370, xl: 450 }, height: 300 }}>
-            <CardMedia
-              component="img"
-              sx={{ height: 200 }}
-              alt="Project Comfisa"
-              image={ProjectComfisa}
-            />
-
-            <CardContent>
-              <Typography gutterBottom variant="h5" component="div">
-                COMFISA SAC
-              </Typography>
-
-              <Typography
-                variant="body2"
-                sx={{
-                  fontSize: 17,
-                  display: "flex",
-                  alignItems: "center",
-                  gap: 1,
-                }}
-              >
-                Made With:{" "}
-                <div className="flex gap-2 font-bold">
-                  <FaHtml5 />
-                  <FaCss3Alt />
-                  <FaBootstrap />
-                  <SiJquery />
-                </div>
-              </Typography>
-            </CardContent>
-          </Card>
-        </a>
-
-        <a
-          href="https://glinsealastro.vercel.app/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <Card sx={{ maxWidth: { xs: 280, lg: 370, xl: 450 }, height: 300 }}>
-            <CardMedia
-              component="img"
-              sx={{ height: 200 }}
-              alt="Project Glinseal"
-              image={ProjectGlinseal}
-            />
-
-            <CardContent>
-              <Typography gutterBottom variant="h5" component="div">
-                Glinseal Website
-              </Typography>
-
-              <Typography
-                variant="body2"
-                sx={{
-                  fontSize: 17,
-                  display: "flex",
-                  alignItems: "center",
-                  gap: 1,
-                }}
-              >
-                Made With:{" "}
-                <div className="flex gap-2 font-bold">
-                  <SiAstro />
-                  <FaBootstrap />
-                  <DiJavascript1 />
-                </div>
-              </Typography>
-            </CardContent>
-          </Card>
-        </a>
+                  <div className="flex gap-2 font-bold">
+                    <Typography variant="body2">Made with:</Typography>
+                    {project.technologies.map((tech) => {
+                      return (
+                        <div key={tech} className="text-xl">
+                          {technology(tech)}
+                        </div>
+                      );
+                    })}
+                  </div>
+                </CardContent>
+              </Card>
+            </a>
+          );
+        })}
       </Slider>
     </div>
   );
