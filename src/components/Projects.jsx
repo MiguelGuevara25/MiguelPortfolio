@@ -33,6 +33,8 @@ import ProjectFestivalMusic from "../img/projectFestivalMusic.png";
 import ProjectEstudioJuridico from "../img/projectEstudioJuridico.png";
 import ProjectCitasVeterinaria from "../img/projectCitasVeterinaria.png";
 import ProjectMuseosLima from "../img/projectMuseosLima.png";
+import ProjectCfGandia from "../img/projectCfGandia.png";
+import ProjectPristinePools from "../img/projectPristinePools.png";
 
 const Projects = () => {
   const settings = {
@@ -111,6 +113,13 @@ const Projects = () => {
     },
 
     {
+      title: "Cyberborder",
+      image: ProjectCyberborder,
+      technologies: ["Next.js", "Bootstrap", "Vercel"],
+      link: "https://www.cyberborder.com/",
+    },
+
+    {
       title: "Veterinary Appointments",
       image: ProjectCitasVeterinaria,
       technologies: ["React", "Tailwindcss", "Vite"],
@@ -152,7 +161,7 @@ const Projects = () => {
       technologies: ["HTML5", "CSS3", "Bootstrap", "jQuery"],
       link: "https://comfisasac.netlify.app",
     },
-    
+
     {
       title: "Glinseal Website",
       image: ProjectGlinseal,
@@ -161,9 +170,16 @@ const Projects = () => {
     },
 
     {
-      title: "Cyberborder",
-      image: ProjectCyberborder,
+      title: "Pristine Pool & Spa",
+      image: ProjectPristinePools,
       technologies: ["Next.js", "Bootstrap", "Vercel"],
+      link: "https://glinsealastro.vercel.app/",
+    },
+    
+    {
+      title: "CF Gandia",
+      image: ProjectCfGandia,
+      technologies: ["Next.js", "Bootstrap", "Strapi", "Vercel"],
       link: "https://www.cyberborder.com/",
     },
   ];
